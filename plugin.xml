@@ -27,5 +27,6 @@
 
 		<header-file src="src/ios/PrivacyScreenPlugin.h"/>
 		<source-file src="src/ios/PrivacyScreenPlugin.m"/>
+		<source-file src="src/ios/BlurPrivacyScreen.m" />
 	</platform>
 </plugin>
