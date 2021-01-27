@@ -18,8 +18,10 @@ static UIImageView *imageView;
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAppWillResignActive:)
                                                name:UIApplicationWillResignActiveNotification object:nil];
 
+  /*
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUIScreen.capturedDidChangeNotification:)
                                                name:UIScreen.capturedDidChangeNotification object:nil];
+                                               */
 }
 
 - (void)onAppDidBecomeActive:(UIApplication *)application
@@ -51,6 +53,7 @@ static UIImageView *imageView;
   }
 }
 
+/*
 - (void)onUIScreen.capturedDidChangeNotification:(UIApplication *)application
 {
   if (imageView == NULL) {
@@ -59,6 +62,7 @@ static UIImageView *imageView;
     [imageView removeFromSuperview];
   }
 }
+*/
 // Code below borrowed from the CDV splashscreen plugin @ https://github.com/apache/cordova-plugin-splashscreen
 // Made some adjustments though, becuase landscape splashscreens are not available for iphone < 6 plus
 - (CDV_iOSDevice) getCurrentDevice
