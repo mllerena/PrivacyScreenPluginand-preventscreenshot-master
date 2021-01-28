@@ -10,6 +10,7 @@ static UIImageView *imageView;
 
 @implementation PrivacyScreenPlugin
 
+UIImageView* cover;
 - (void)pluginInitialize
 {
   
@@ -23,6 +24,7 @@ static UIImageView *imageView;
                                             selector:@selector(applicationWillResignActive)
                                                 name:UIApplicationWillResignActiveNotification
                                               object:nil];
+  /*
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(tookScreeshot)
                                                  name:UIApplicationUserDidTakeScreenshotNotification
@@ -32,6 +34,7 @@ static UIImageView *imageView;
                                             selector:@selector(goingBackground)
                                                 name:UIApplicationWillResignActiveNotification
                                               object:nil];
+                                              */
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(screenCaptureStatusChanged)
@@ -51,6 +54,7 @@ static UIImageView *imageView;
                                                */
 }
 
+/*
 -(void) goingBackground {
     NSLog(@"Me la scattion in bck");
     if(_eventCommand!=nil) {
@@ -68,6 +72,7 @@ static UIImageView *imageView;
     }
 
 }
+*/
 
 -(void)setupView {
     BOOL isCaptured = [[UIScreen mainScreen] isCaptured];
