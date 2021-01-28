@@ -5,7 +5,7 @@
  * MIT Licensed
  */
 #import "PrivacyScreenPlugin.h"
-#import "ScreenshotBlocker.h"
+#import "ScreenRecordingDetector.h"
 
 static UIImageView *imageView;
 
