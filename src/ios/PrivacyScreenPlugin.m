@@ -61,11 +61,16 @@ UIImageView* cover;
 }
 -(void)tookScreeshot {
     NSLog(@"fatta la foto?");
+    
+    [self setupViewTookScreeshot];
+    
     if(_eventCommand!=nil) {
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"tookScreenshot"];
         [pluginResult setKeepCallbackAsBool:YES];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:_eventCommand.callbackId];
     }
+    
+    
 
 }
 
@@ -81,6 +86,11 @@ UIImageView* cover;
         NSLog(@"Non registro");
 
     }
+}
+
+-(void)setupViewTookScreeshot {
+    [self webView].alpha = 0.f;
+    NSLog(@"setupViewTookScreeshot");
 }
 
 -(void)appDidBecomeActive {
