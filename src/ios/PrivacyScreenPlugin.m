@@ -5,9 +5,13 @@
  * MIT Licensed
  */
 #import "PrivacyScreenPlugin.h"
-#import "ScreenRecordingDetector.h"
 
 static UIImageView *imageView;
+
+@interface PrivacyScreenPlugin() {
+    CDVInvokedUrlCommand * _eventCommand;
+}
+@end
 
 @implementation PrivacyScreenPlugin
 
