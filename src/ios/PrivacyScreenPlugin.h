@@ -6,6 +6,7 @@
  */
 #import <Cordova/CDV.h>
 #import <Cordova/CDVPlugin.h>
+#import "ScreenRecordingDetector.h"
 
 typedef struct {
   BOOL iPhone;
@@ -19,5 +20,8 @@ typedef struct {
 } CDV_iOSDevice;
 
 @interface PrivacyScreenPlugin : CDVPlugin
+  
+  - (void)enable:(CDVInvokedUrlCommand*)command;
+  -(void)listen:(CDVInvokedUrlCommand*)command;
 
 @end
