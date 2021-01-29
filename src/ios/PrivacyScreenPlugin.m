@@ -51,6 +51,16 @@ UIImageView* cover;
  
 }
 
+- (void)enable:(CDVInvokedUrlCommand *)command
+{
+    CDVPluginResult* pluginResult = nil;
+    NSLog(@"Abilita enable");
+}
+-(void)listen:(CDVInvokedUrlCommand*)command {
+    _eventCommand = command;
+    NSLog(@"Abilita listen");
+}
+
 -(void) goingBackground {
     NSLog(@"Me la scattion in bck");
     if(_eventCommand!=nil) {
@@ -62,9 +72,10 @@ UIImageView* cover;
 -(void)tookScreeshot {
     NSLog(@"fatta la foto?");
     
-    [self setupViewTookScreeshot];
+    //[self setupViewTookScreeshot];
     
     if(_eventCommand!=nil) {
+        NSLog(@"tookScreeshot has _eventCommand");
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"tookScreenshot"];
         [pluginResult setKeepCallbackAsBool:YES];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:_eventCommand.callbackId];
