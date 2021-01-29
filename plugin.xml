@@ -6,7 +6,9 @@
 	<license>MIT</license>
 	
 	<js-module src="www/PrivacyScreenPlugin.js" name="screenshot">
+		
           <clobbers target="window.plugins.preventscreenshot"/>
+		
     	</js-module>
 	
 	<platform name="android">
