@@ -7,15 +7,18 @@
   //exec(success, error, "PrivacyScreenPlugin", "activate", [arg]);
 //};
 
+var exec = require('cordova/exec');
+var cordova = require('cordova');
+
 var screenshot = {
   enable: function (successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'screenshotName', 'enable', []);
+    exec(successCallback, errorCallback, 'screenshotName', 'enable', []);
   },
   disable: function (successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'screenshotName', 'disable', []);
+    exec(successCallback, errorCallback, 'screenshotName', 'disable', []);
   },
   registerListener : function(callback) {
-    cordova.exec(callback, callback, 'screenshotName', 'listen', []);
+    exec(callback, callback, 'screenshotName', 'listen', []);
 
   }
 }
