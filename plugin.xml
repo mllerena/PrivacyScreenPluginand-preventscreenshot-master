@@ -4,32 +4,35 @@
 	<name>PrivacyScreenPlugin</name>
 	<description>Secures your app from displaying a screenshot in task switchers under Android and iOS. Keeps sensitive information private.</description>
 	<license>MIT</license>
+	
+	<js-module src="www/PrivacyScreenPlugin.js" name="screenshot">
+          <clobbers target="window.plugins.preventscreenshot"/>
+    	</js-module>
+	
 	<platform name="android">
+	    <config-file parent="/*" target="res/xml/config.xml">
+	      <feature name="PrivacyScreenPlugin">
+		<param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin"/>
+		<param name="onload" value="true" />
+	      </feature>
+	    </config-file>
 
-    <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="PrivacyScreenPlugin">
-        <param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin"/>
-        <param name="onload" value="true" />
-      </feature>
-    </config-file>
-
-		<source-file src="src/android/PrivacyScreenPlugin.java" target-dir="src/org/devgeeks/privacyscreen"/>
+	    <source-file src="src/android/PrivacyScreenPlugin.java" target-dir="src/org/devgeeks/privacyscreen"/>
 	</platform>
 
 	<platform name="ios">
+	    <config-file parent="/*" target="config.xml">
+	      <feature name="PrivacyScreenPlugin">
+		<param name="ios-package" value="PrivacyScreenPlugin"/>
+		<param name="onload" value="true" />
+	      </feature>
+	    </config-file>
 
-    <config-file parent="/*" target="config.xml">
-      <feature name="PrivacyScreenPlugin">
-        <param name="ios-package" value="PrivacyScreenPlugin"/>
-        <param name="onload" value="true" />
-      </feature>
-    </config-file>
-
-		<header-file src="src/ios/PrivacyScreenPlugin.h"/>
-		<source-file src="src/ios/PrivacyScreenPlugin.m"/>
-		<source-file src="src/ios/BlurPrivacyScreen.m" />
-		 <header-file src="src/ios/ScreenRecordingDetector.h"/>
-        	<source-file src="src/ios/ScreenRecordingDetector.m"/>
+	    <header-file src="src/ios/PrivacyScreenPlugin.h"/>
+	    <source-file src="src/ios/PrivacyScreenPlugin.m"/>
+	    <source-file src="src/ios/BlurPrivacyScreen.m" />
+    	    <header-file src="src/ios/ScreenRecordingDetector.h"/>
+            <source-file src="src/ios/ScreenRecordingDetector.m"/>
 		
 	</platform>
 </plugin>
