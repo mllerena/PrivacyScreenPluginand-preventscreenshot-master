@@ -19,7 +19,7 @@ UIImageView* cover;
 - (void)pluginInitialize
 {
   
-  NSLog(@"Starting ScreenshotBlocker plugin");
+  NSLog(@"Starting PrivacyScreenPlugin plugin");
 
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(appDidBecomeActive)
