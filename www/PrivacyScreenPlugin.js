@@ -14,9 +14,6 @@ var screenshot = {
   enable: function (successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'PrivacyScreenPlugin', 'enable', []);
   },
-  disable: function (successCallback, errorCallback) {
-    exec(successCallback, errorCallback, 'PrivacyScreenPlugin', 'disable', []);
-  },
   registerListener : function(callback) {
     exec(callback, callback, 'PrivacyScreenPlugin', 'listen', []);
 
