@@ -1,0 +1,7 @@
+repositories{
+    jcenter()
+}
+
+dependencies {
+    implementation 'com.akexorcist:screenshotdetection:1.0.1'
+}
