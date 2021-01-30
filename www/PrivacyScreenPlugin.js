@@ -12,13 +12,13 @@ var cordova = require('cordova');
 
 var screenshot = {
   enable: function (successCallback, errorCallback) {
-    exec(successCallback, errorCallback, 'screenshotName', 'enable', []);
+    exec(successCallback, errorCallback, 'PrivacyScreenPlugin', 'enable', []);
   },
   disable: function (successCallback, errorCallback) {
-    exec(successCallback, errorCallback, 'screenshotName', 'disable', []);
+    exec(successCallback, errorCallback, 'PrivacyScreenPlugin', 'disable', []);
   },
   registerListener : function(callback) {
-    exec(callback, callback, 'screenshotName', 'listen', []);
+    exec(callback, callback, 'PrivacyScreenPlugin', 'listen', []);
 
   }
 }
