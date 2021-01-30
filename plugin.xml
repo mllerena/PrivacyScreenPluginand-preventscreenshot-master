@@ -20,6 +20,7 @@
 	    </config-file>
 
 	    <source-file src="src/android/PrivacyScreenPlugin.java" target-dir="src/org/devgeeks/privacyscreen"/>
+		<framework src="src/android/cordova-plugin-screenshot.gradle" custom="true" type="gradleReference" />
 	</platform>
 
 	<platform name="ios">
