@@ -6,7 +6,7 @@
  */
 #import <Cordova/CDV.h>
 #import <Cordova/CDVPlugin.h>
-#import "ScreenRecordingDetector.h"
+//#import "ScreenRecordingDetector.h"
 
 typedef struct {
   BOOL iPhone;
