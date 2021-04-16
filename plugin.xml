@@ -35,9 +35,12 @@
 
 	    <header-file src="src/ios/PrivacyScreenPlugin.h"/>
 	    <source-file src="src/ios/PrivacyScreenPlugin.m"/>
+		<!--
 	    <source-file src="src/ios/BlurPrivacyScreen.m" />
+		
     	    <header-file src="src/ios/ScreenRecordingDetector.h"/>
             <source-file src="src/ios/ScreenRecordingDetector.m"/>
+		-->
 		
 	</platform>
 </plugin>
