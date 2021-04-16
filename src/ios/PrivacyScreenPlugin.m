@@ -43,11 +43,12 @@ UIImageView* cover;
                                               object:nil];
                                               
 
-    
+    /*
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(screenCaptureStatusChanged)
                                                  name:kScreenRecordingDetectorRecordingStatusChangedNotification
                                                object:nil];
+                                               */
                                                
   
  
@@ -91,7 +92,7 @@ UIImageView* cover;
     BOOL isCaptured = [[UIScreen mainScreen] isCaptured];
     NSLog(@"Is screen captured? %@", (isCaptured?@"SI":@"NO"));
 
-    
+    /*
     if ([[ScreenRecordingDetector sharedInstance] isRecording]) {
         [self webView].alpha = 0.f;
         NSLog(@"Registro o prendo screenshots");
@@ -100,6 +101,7 @@ UIImageView* cover;
         NSLog(@"Non registro");
 
     }
+    */
     
 }
 
@@ -109,22 +111,24 @@ UIImageView* cover;
 }
 
 -(void)appDidBecomeActive {
-    
+    /*
     [ScreenRecordingDetector triggerDetectorTimer];
     if(cover!=nil) {
         [cover removeFromSuperview];
         cover = nil;
     }
+    */
     
 }
 -(void)applicationWillResignActive {
-    
+    /*
     [ScreenRecordingDetector stopDetectorTimer];
     if(cover == nil) {
         cover = [[UIImageView alloc] initWithFrame:[self.webView frame]];
         cover.backgroundColor = [UIColor blackColor];
         [self.webView addSubview:cover];
     }
+    */
     
 }
 -(void)screenCaptureStatusChanged {
